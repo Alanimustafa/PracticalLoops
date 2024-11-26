@@ -50,6 +50,18 @@ function divFizzBuzz () {
 
 
 
+//If a number is not divisible by either 3 or 5, log the number.
+function notDivFizzBuzz () {
+  let i = 0;
+  while (i <= 100) {
+    if (i % 3 !== 0 && i % 5 !== 0) {
+      console.log('FIZZ - BUZZ - NOT DIV', i);
+    }
+    i++;
+  }
+}
+
+
 
 
 
@@ -81,4 +93,10 @@ console.log("--------------------------------------")
 //If a number is divisible by both 3 and 5, log “Fizz Buzz.”
 console.log('FIZZ - BUZZ DIVISIBLE BY 3 AND 5');
 divFizzBuzz();
+console.log("--------------------------------------")
+
+
+//If a number is not divisible by either 3 or 5, log the number.
+console.log('FIZZ - BUZZ NOT DIVISIBLE BY 3 AND 5');
+notDivFizzBuzz();
 console.log("--------------------------------------")
