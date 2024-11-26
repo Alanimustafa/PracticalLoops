@@ -12,7 +12,16 @@ function loop1To100 () {
     }
 }
 
-
+//If a number is divisible by 3, log “Fizz.”
+function fizz () {
+  let i = 0;
+  while (i <= 100) {
+    if (i % 3 == 0) {
+      console.log('Fizz', i);
+    }
+    i++;
+  }
+}
 
 
 
@@ -29,6 +38,10 @@ function loop1To100 () {
 
 //Loop through all numbers from 1 to 100.
 console.log('loop 1 to 100')
-loop1To100();
+// loop1To100();
 console.log("--------------------------------------")
 
+
+//If a number is divisible by 3, log “Fizz.”
+console.log('FIZZ')
+fizz();
