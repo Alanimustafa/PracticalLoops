@@ -24,6 +24,17 @@ function fizz () {
 }
 
 
+//If a number is divisible by 5, log “Buzz.”
+function buzz () {
+  let i = 0;
+  while (i <= 100) {
+    if (i % 5 == 0) {
+      console.log('BUZZ', i);
+    }
+    i++;
+  }
+}
+
 
 
 
@@ -45,3 +56,10 @@ console.log("--------------------------------------")
 //If a number is divisible by 3, log “Fizz.”
 console.log('FIZZ')
 fizz();
+console.log("--------------------------------------")
+
+
+//If a number is divisible by 5, log “Buzz.”
+console.log('BUZZ')
+buzz();
+console.log("--------------------------------------")
