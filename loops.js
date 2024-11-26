@@ -37,6 +37,19 @@ function buzz () {
 
 
 
+//If a number is divisible by both 3 and 5, log “Fizz Buzz.”
+function divFizzBuzz () {
+  let i = 0;
+  while (i <= 100) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      console.log('FIZZ - BUZZ', i);
+    }
+    i++;
+  }
+}
+
+
+
 
 
 
@@ -48,18 +61,24 @@ function buzz () {
 //---------------- Functions Run -----------------------------
 
 //Loop through all numbers from 1 to 100.
-console.log('loop 1 to 100')
+console.log('loop 1 to 100');
 // loop1To100();
 console.log("--------------------------------------")
 
 
 //If a number is divisible by 3, log “Fizz.”
-console.log('FIZZ')
+console.log('FIZZ');
 fizz();
 console.log("--------------------------------------")
 
 
 //If a number is divisible by 5, log “Buzz.”
-console.log('BUZZ')
+console.log('BUZZ');
 buzz();
+console.log("--------------------------------------")
+
+
+//If a number is divisible by both 3 and 5, log “Fizz Buzz.”
+console.log('FIZZ - BUZZ DIVISIBLE BY 3 AND 5');
+divFizzBuzz();
 console.log("--------------------------------------")
