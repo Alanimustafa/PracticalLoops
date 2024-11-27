@@ -2,37 +2,42 @@
 //------------------------------
 
 
-
-//Part 1: Fizz Buzz
+//---------------- Part 1: Fizz Buzz ------------------------------------------
 
 //Loop through all numbers from 1 to 100.
 function loop1To100 () {
+  loop100Array = [];
     for (i = 1; i <= 100; i++) {
-      console.log(i);
+      loop100Array.push(i);
     }
+    console.log('Loop from 1 to 100', loop100Array);
 }
 
 //If a number is divisible by 3, log “Fizz.”
 function fizz () {
   let i = 0;
+  fizzArray = [];
   while (i <= 100) {
     if (i % 3 == 0) {
-      console.log('Fizz', i);
+      fizzArray.push(i);
     }
     i++;
   }
+  console.log('Fizz', fizzArray);
 }
 
 
 //If a number is divisible by 5, log “Buzz.”
 function buzz () {
   let i = 0;
+  buzzArry = [];
   while (i <= 100) {
     if (i % 5 == 0) {
-      console.log('BUZZ', i);
+      buzzArry.push(i);
     }
     i++;
   }
+  console.log('BUZZ', buzzArry);
 }
 
 
@@ -40,12 +45,14 @@ function buzz () {
 //If a number is divisible by both 3 and 5, log “Fizz Buzz.”
 function divFizzBuzz () {
   let i = 0;
+  divFizzBuzzArray = [];
   while (i <= 100) {
     if (i % 3 == 0 && i % 5 == 0) {
-      console.log('FIZZ - BUZZ', i);
+      divFizzBuzzArray.push(i);
     }
     i++;
   }
+  console.log('FIZZ - BUZZ', divFizzBuzzArray);
 }
 
 
@@ -53,12 +60,14 @@ function divFizzBuzz () {
 //If a number is not divisible by either 3 or 5, log the number.
 function notDivFizzBuzz () {
   let i = 0;
+  notDivFizzBuzzArray = [];
   while (i <= 100) {
     if (i % 3 !== 0 && i % 5 !== 0) {
-      console.log('FIZZ - BUZZ - NOT DIV', i);
+      notDivFizzBuzzArray.push(i);
     }
     i++;
   }
+  console.log('FIZZ - BUZZ - NOT DIV', notDivFizzBuzzArray);
 }
 
 
@@ -98,17 +107,14 @@ function notDivFizzBuzz () {
           }
       }
       console.log(primes);
-      // return primes;
   }
   
-
-
 
 //---------------- Functions Run -----------------------------
 
 //Loop through all numbers from 1 to 100.
 console.log('loop 1 to 100');
-// loop1To100();
+loop1To100();
 console.log("--------------------------------------")
 
 
