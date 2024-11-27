@@ -63,10 +63,44 @@ function notDivFizzBuzz () {
 
 
 
+//---------------- Part 2: Prime Time ------------------------------------------
 
+// Prime Number Finder Function.
 
+  // This function is to determine which number is prime and which is not.
+    function primeFinder(number) {
+        // Since 1 is not prime this will return false, 
+        // and 2 is the only even prime number, it will return true 
+        if (number <= 1) return false;
+        if (number === 2) return true;
+        
+        // If the number is even and greater than 2 then it's not a prime number.
+        if (number % 2 === 0) return false;
+        
+        // The equation from Google: factors from 3 to the square root of the number 
+        for (let i = 3; i * i <= number; i += 2) {
+            if (number % i === 0) return false;
+        }
+        return true;
+    }
 
+  //This function is to spcify the interval (startNumber, endNumber),
+  //because the assignment did not specify start from which number.
+  //I used startNumber instead of n.
+    function findPrimes(startNumber, endNumber) {
 
+      // I used push method to add the prime number to an array.
+      let primes = [];
+      for (let i = startNumber; i <= endNumber; i++) {
+          if (primeFinder(i)) {
+              primes.push(i);
+              break;
+          }
+      }
+      console.log(primes);
+      // return primes;
+  }
+  
 
 
 
@@ -99,4 +133,15 @@ console.log("--------------------------------------")
 //If a number is not divisible by either 3 or 5, log the number.
 console.log('FIZZ - BUZZ NOT DIVISIBLE BY 3 AND 5');
 notDivFizzBuzz();
+console.log("--------------------------------------")
+
+
+
+
+// Part 2: Prime Time.
+console.log('Part 2: Prime Time');
+
+// Please set the start and end of the scope of numbers for more flexibilty in the search. 
+// By default I put 5000 as a limit.
+findPrimes(12,5000);
 console.log("--------------------------------------")
